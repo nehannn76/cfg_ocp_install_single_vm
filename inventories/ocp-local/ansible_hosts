@@ -1,0 +1,2 @@
+[ocp-server]
+origin-local ansible_connection=local

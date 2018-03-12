@@ -1,0 +1,27 @@
+---
+###############################
+# ROLE: origin-server
+###############################
+# Admin user for running OpenShift commands
+admin_user: vagrant
+
+# Admin user password - help in vault which should be encrypted when password is hardened
+admin_pwd: "{{ vault_admin_pwd }}"
+
+ocp_host_ip: "192.168.56.115"
+
+# External IP network CIDRs for accessing OpenShift
+#external_ip_cidr: 192.168.56.0/24
+
+# Do not disable self provisioning
+disable_self_provisioning: "no"
+
+###############################
+# ROLE: origin-server-configure
+###############################
+# List of users (overrides default list of 10 users: user01 to user10)
+#users:
+#  - "ian.turner"
+#  - "chris.bh"
+#  - "nick.jupp"
+...

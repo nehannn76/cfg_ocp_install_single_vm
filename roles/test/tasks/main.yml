@@ -1,0 +1,25 @@
+---
+- name: Updating Kube Config files (10-0-2-15)
+  replace:
+    path: "{{ ocp_path }}/openshift.local.config/{{ item }}"
+    regexp: '^(.*)10-0-2-15(.*)$'
+    replace: |
+      \1'{{ (ocp_host_ip.split(".")) | join("-") }}'\2
+    backup: yes
+  with_items:
+    - "master/openshift-master.kubeconfig"
+    - "master/admin.kubeconfig"
+    - "node-{{ ansible_hostname }}/node.kubeconfig"
+
+- name: Updating Kube Config files (10.0.2.15)
+  replace:
+    path: "{{ ocp_path }}/openshift.local.config/{{ item }}"
+    regexp: '^(.*)10(.)0(.)2(.)15(.*)$'
+    replace: |
+      \1'{{ ocp_host_ip }}'\5
+    backup: yes
+  with_items:
+    - "master/openshift-master.kubeconfig"
+    - "master/admin.kubeconfig"
+    - "node-{{ ansible_hostname }}/node.kubeconfig"
+...

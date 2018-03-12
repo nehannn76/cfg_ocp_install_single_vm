@@ -1,0 +1,9 @@
+---
+- name: Install and configure OpenShift Origin
+  hosts: ocp-server
+  become: yes
+  become_user: root
+  roles:
+    - origin-server
+    - origin-server-configure
+...

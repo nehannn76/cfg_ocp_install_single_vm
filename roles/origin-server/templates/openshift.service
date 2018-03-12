@@ -1,0 +1,12 @@
+[Unit]
+Description=OpenShift Container Platform
+After=syslog.target network.target docker.target
+
+[Service]
+WorkingDirectory={{ ocp_path }}
+EnvironmentFile=/etc/systemd/system/openshift.service.d/openshift.conf
+ExecStart={{ ocp_path }}/openshift start --master-config=./openshift.local.config/master/master-config.yaml --node-config=./openshift.local.config/node-{{ ansible_hostname }}/node-config.yaml
+Restart=never
+
+[Install]
+WantedBy=multi-user.target

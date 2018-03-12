@@ -1,0 +1,18 @@
+---
+###############################
+# ROLE: origin-server
+###############################
+ocp_version: 3.7.1
+
+# Do not disable self provisioning
+disable_self_provisioning: "no"
+
+###############################
+# ROLE: origin-server-configure
+###############################
+# List of users (overrides default list of 10 users: user01 to user10)
+#users:
+#  - "ian.turner"
+#  - "chris.bh"
+#  - "nick.jupp"
+...

@@ -1,0 +1,45 @@
+allowDisabledDocker: false
+apiVersion: v1
+authConfig:
+  authenticationCacheSize: 1000
+  authenticationCacheTTL: 5m
+  authorizationCacheSize: 1000
+  authorizationCacheTTL: 5m
+dnsBindAddress: {{ ocp_host_ip | default('10.0.2.15') }}:53
+dnsDomain: cluster.local
+dnsIP: {{ ocp_host_ip | default('10.0.2.15') }}
+dnsNameservers: null
+dnsRecursiveResolvConf: ""
+dockerConfig:
+  dockerShimRootDirectory: /var/lib/dockershim
+  dockerShimSocket: /var/run/dockershim.sock
+  execHandlerName: native
+enableUnidling: true
+imageConfig:
+  format: openshift/origin-${component}:${version}
+  latest: false
+iptablesSyncPeriod: 30s
+kind: NodeConfig
+masterClientConnectionOverrides:
+  acceptContentTypes: application/vnd.kubernetes.protobuf,application/json
+  burst: 40
+  contentType: application/vnd.kubernetes.protobuf
+  qps: 20
+masterKubeConfig: node.kubeconfig
+networkConfig:
+  mtu: 1450
+  networkPluginName: ""
+nodeIP: ""
+nodeName: ose-server
+podManifestConfig: null
+servingInfo:
+  bindAddress: 0.0.0.0:10250
+  bindNetwork: tcp4
+  certFile: server.crt
+  clientCA: node-client-ca.crt
+  keyFile: server.key
+  namedCertificates: null
+volumeConfig:
+  localQuota:
+    perFSGroup: null
+volumeDirectory: {{ ocp_path }}/openshift.local.volumes

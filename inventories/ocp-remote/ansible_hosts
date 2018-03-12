@@ -1,0 +1,2 @@
+[ocp-server]
+origin-remote ansible_host=192.168.56.115 ansible_user=vagrant ansible_connection=ssh
