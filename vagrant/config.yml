@@ -1,0 +1,12 @@
+---
+configs:
+  use: 'ocp-server'
+
+  ocp-server:
+    hostname: 'ocp-server'
+    vm_name: 'ocp-server'
+    public_ip: '192.168.56.115'
+    vm_memory: '16384'
+    vagrant_box: 'centos/7'
+    shell_script: 'ocp-c7.sh'
+...
