@@ -5,7 +5,7 @@ authConfig:
   authenticationCacheTTL: 5m
   authorizationCacheSize: 1000
   authorizationCacheTTL: 5m
-dnsBindAddress: {{ ocp_host_ip | default('10.0.2.15') }}:53
+dnsBindAddress: {{ dns_bind_address | default('10.0.2.15') }}:8053
 dnsDomain: cluster.local
 dnsIP: {{ ocp_host_ip | default('10.0.2.15') }}
 dnsNameservers: null

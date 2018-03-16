@@ -88,7 +88,7 @@ corsAllowedOrigins:
 disabledFeatures: null
 dnsConfig:
   allowRecursiveQueries: true
-  bindAddress: 0.0.0.0:8053
+  bindAddress: 127.0.0.1:8053
   bindNetwork: tcp4
 etcdClientInfo:
   ca: ca.crt

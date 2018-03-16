@@ -8,7 +8,9 @@ admin_user: vagrant
 # Admin user password - help in vault which should be encrypted when password is hardened
 admin_pwd: "{{ vault_admin_pwd }}"
 
+public_url: "ocp-singlevm.mydemo.io"
 ocp_host_ip: "192.168.56.115"
+dns_bind_address: "127.0.0.1"
 
 # External IP network CIDRs for accessing OpenShift
 #external_ip_cidr: 192.168.56.0/24
