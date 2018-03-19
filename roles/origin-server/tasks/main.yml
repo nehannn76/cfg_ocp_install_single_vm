@@ -95,10 +95,10 @@
     dest: "{{ ocp_path }}/openshift.local.config/node-{{ ansible_hostname }}/node-config.yaml"
 
 # The replace value contains xxxxx to preserve the back reference when the host IP address is resolved
-- name: Updating Kube Config files (10-0-2-15)
+- name: Updating Kube Config files (172-31-22-170)
   replace:
     path: "{{ ocp_path }}/openshift.local.config/{{ item }}"
-    regexp: '^(.*)10-0-2-15(.*)$'
+    regexp: '^(.*)172-31-22-170(.*)$'
     replace: '\1xxxxx{{ (ocp_host_ip.split(".")) | join("-") }}\2'
     backup: yes
   with_items:
@@ -107,10 +107,10 @@
     - "node-{{ ansible_hostname }}/node.kubeconfig"
 
 # The replace value contains xxxxx to preserve the back reference when the host IP address is resolved
-- name: Updating Kube Config files (10.0.2.15)
+- name: Updating Kube Config files (172.31.22.170)
   replace:
     path: "{{ ocp_path }}/openshift.local.config/{{ item }}"
-    regexp: '^(.*)10(.)0(.)2(.)15(.*)$'
+    regexp: '^(.*)172(.)31(.)22(.)170(.*)$'
     replace: '\1xxxxx{{ ocp_host_ip }}\5'
     backup: yes
   with_items:
