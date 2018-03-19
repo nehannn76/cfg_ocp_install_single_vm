@@ -1,0 +1,28 @@
+---
+- name: Changing Ip Address..
+  hosts: localhost
+  connection: local
+  become: true
+  vars_files:
+      - var.txt
+  tasks:
+    - name: Updating Kube Config files (10-0-2-15)
+      replace:
+        path: "/etc/ansible/cfg_ocp_install_single_vm/file.txt"
+        regexp: '^(.*)192-168-0-1(.*)$'
+        replace: '\1xxxxx{{ (item.split(".")) | join("-") }}\2'
+        backup: yes
+      with_items:
+        - "54.200.169.127"
+    - name: Updating Kube Config files (10.0.2.15)
+      replace:
+        path: "/etc/ansible/cfg_ocp_install_single_vm/file.txt"
+        regexp: '^(.*)172(.)31(.)24(.)136(.*)$'
+        replace: '\1xxxxx{{ ocp_host_ip }}\5'
+        backup: yes
+    - name: Updating Kube Config files (remove xxxxx)
+      replace:
+        path: "/etc/ansible/cfg_ocp_install_single_vm/file.txt"
+        regexp: '^(.*)xxxxx(.*)$'
+        replace: '\1\2'
+        backup: yes

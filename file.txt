@@ -1,0 +1,21 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM2akNDQWRLZ0F3SUJBZ0lCQVRBTkJna3Foa2lHOXcwQkFRc0ZBREFtTVNRd0lnWURWUVFEREJ0dmNHVnUKYzJocFpuUXRjMmxuYm1WeVFERTFNakV5TURFNE9USXdIaGNOTVRnd016RTJNVEl3TkRVeVdoY05Nak13TXpFMQpNVEl3TkRVeldqQW1NU1F3SWdZRFZRUUREQnR2Y0dWdWMyaHBablF0YzJsbmJtVnlRREUxTWpFeU1ERTRPVEl3CmdnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUURkK3RtelhteG9QVUJiT0RuZElyQ2kKdkRIWFBQWHRlOHd6ZXRkYk42b3hvRDMzQ0ROelRxbDhrcGk5alRBSnl6R3VsSC9WSWk3WDRXcFRGYmJPMWJlMQo5eWtoeUhBdWRHSGdYQTlwRHBOVDBISW9nTUpya3FuUWt4UlVpWmdnU3RIWi8zRDJBTmZFVWFOTlhRWGcwbmtkCnpZM3ZTbm91VUltRWxVSUE3MGxWYVdyZks2bklkemZlcWRvbzhXTUNpTVpVcDB1YkVpQmY5Y3gxVnpzT2lPaHYKR0tMWnIvTGNCV0pnMzFpYUUxYk05ODJRTmM3RUFCVE9OcUY3WVJWUmh4bnFXR2tvL3RwNDNoUFA4MFphS21oKwptYlRKMlhvSi9GT2xkMVZPYmxmQXU0RjFpU094ZXYwdFhucmdqalpGYzYvaTJwNXBTTmJwSkdnWkxkL0Y0UnB2CkFnTUJBQUdqSXpBaE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQjZPTXZGZmRWekpVMnlNeTVPM2dNYW93b1plOEJSU0dwdFZNYktCTHRiWG9rRwpCYXU3QVZjcmRrU0lyTTBjYkVKWnI1amF4ZXJtbHJDVC9BRWpWMzRveDZxem96SVpBY1RzcXg2cjQzSjY4M0R6ClRjZmhTcXdkcmdhNjZmb2RZN1gvQmphcDhyU1NzaERBL2dqVG1EWE4rbldwaksyMnc5djB0UjA2LzBlZWpaWi8KT2UxUE8wNVlyNWNsdGJDaWhRV3JxOEh5WWpOZys3cWlvVk1mWXE0VkRLWVkzK0FIV1J4cEc1VndzWmF3R2JMdQp3SWdTZDIvRFVURytYVjBwbkZJd0xERG83MktZVktDcVEzNGsreWdHY2R3by9BdktEV3RiaU5QUndEOGgyM1NaCmJJdkJOVUZmSmh0SEk1WG1GTXdKYU5wdHZNRmgxNjgzZUFNUkRpN3QKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://172.31.24.136:8443
+  name: xxxxxxxxxx54-200-169-127:8443
+contexts:
+- context:
+    cluster: xxxxxxxxxx54-200-169-127:8443
+    namespace: default
+    user: system:openshift-master/xxxxxxxxxx54-200-169-127:8443
+  name: default/xxxxxxxxxx54-200-169-127:8443/system:openshift-master
+current-context: default/xxxxxxxxxx54-200-169-127:8443/system:openshift-master
+kind: Config
+preferences: {}
+users:
+- name: system:openshift-master/xxxxxxxxxx54-200-169-127:8443
+  user:
+@                                                                                                                      @                                                                                                                      @                                                                                                                      @                                                                                                                      @                                                                                                                      @                                                                                                                      @                                                                                                                      @
+"openshift-master.kubeconfig" 20L, 5702C
+
