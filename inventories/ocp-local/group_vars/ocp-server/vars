@@ -4,6 +4,7 @@
 ###############################
 ocp_version: 3.7.1
 
+ocp_host_ip: "35.162.8.78"
 # Do not disable self provisioning
 disable_self_provisioning: "no"
 
